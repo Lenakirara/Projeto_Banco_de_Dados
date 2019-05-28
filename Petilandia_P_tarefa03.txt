@@ -1,0 +1,43 @@
+﻿/*create database petilandia*/
+
+create table Cliente(
+CPF CHAR(11) NOT NULL,
+Nome VARCHAR (15) NOT NULL,
+Endereço VARCHAR(40),
+Email VARCHAR (30) NOT NULL,
+PRIMARY KEY(CPF));
+
+create table Produto(
+Código INT NOT NULL,
+Descriçã_produto VARCHAR (20) NOT NULL,
+tipo_produto VARCHAR(15) NOT NULL,
+Preço DECIMAL(10,2) NOT NULL,
+PRIMARY KEY(Código));
+
+create table Registra(
+Matricula INT NOT NULL,
+Data_hora TIME NOT NULL,
+PRIMARY KEY(Matricula));
+
+create table Funcionario(
+Nome VARCHAR(20) NOT NULL,
+Matricula INT NOT NUll,
+PRIMARY KEY(Matricula));
+
+create table Agendamento(
+Código INT NOT NULL,
+Data_hora TIME NOT NULL,
+Descrição VARCHAR(15) NOT NULL,
+PRIMARY KEY(Código));
+
+create table Atendimento_Pet(
+Código INT NOT NULL,
+PRIMARY KEY(Código));
+
+create table Avaliação(
+CPF_cliente
+Comentário VARCHAR(50) NOT NULL,
+Data_hora TIME NOT NULL,
+PRIMARY KEY(CPF_cliente));
+
+
